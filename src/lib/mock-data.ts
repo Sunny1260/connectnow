@@ -1,6 +1,7 @@
 import type { Chat, Message } from '@/types';
 
-export const MOCK_CHATS: Chat[] = [
+// Changed from const to let to allow mutation for prototype purposes
+export let MOCK_CHATS: Chat[] = [
   {
     id: '1',
     name: 'Alice Wonderland',
@@ -33,7 +34,8 @@ export const MOCK_CHATS: Chat[] = [
   },
 ];
 
-export const MOCK_MESSAGES: { [chatId: string]: Message[] } = {
+// Changed from const to let to allow mutation for prototype purposes
+export let MOCK_MESSAGES: { [chatId: string]: Message[] } = {
   '1': [
     { id: 'm1-1', chatId: '1', text: 'Hey Alice, how are you?', sender: 'me', senderName: 'Me', timestamp: '10:00 AM' },
     { id: 'm1-2', chatId: '1', text: 'Hi! I am good, thanks for asking. How about you?', sender: 'other', senderName: 'Alice Wonderland', avatarUrl: 'https://placehold.co/100x100.png', timestamp: '10:01 AM' },
